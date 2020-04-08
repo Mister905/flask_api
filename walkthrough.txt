@@ -1,0 +1,9 @@
+https://code.visualstudio.com/docs/python/tutorial-flask  ** VS CODE SETUP **
+python -m venv env
+View->Command Palette->Select Interpreter
+View->Command Palette->Create New Integreated Interpreter
+python -m pip install flask flask-sqlalchemy mysqlclient flask-marshmallow marshmallow-sqlalchemy
+export FLASK_ENV=development
+Setup modular folder structure
+cd app
+python -m flask run
