@@ -4,6 +4,9 @@ View->Command Palette->Select Interpreter
 View->Command Palette->Create New Integreated Interpreter
 python -m pip install flask flask-sqlalchemy mysqlclient flask-marshmallow marshmallow-sqlalchemy
 export FLASK_ENV=development
+export FLASK_APP=app.py
 Setup modular folder structure
 cd app
 python -m flask run
+install flake8 linter
+flask scripts <command>
