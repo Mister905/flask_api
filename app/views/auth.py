@@ -2,7 +2,7 @@ from flask import Blueprint, jsonify, request
 from ..models.User import User
 from ..extensions.sqlalchemy import db
 from ..extensions.flask_mail import mail
-from flask_jwt_extended import JWTManager, jwt_required, create_access_token
+from flask_jwt_extended import JWTManager, create_access_token
 from flask_mail import Message
 
 auth = Blueprint("auth", __name__)
