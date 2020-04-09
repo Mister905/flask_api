@@ -5,6 +5,7 @@ from flask_marshmallow import Marshmallow
 # Views
 from .views.test import test
 from .views.planets import planets
+from .views.auth import auth
 
 # Scripts
 from .scripts.index import scripts
@@ -22,4 +23,5 @@ def create_app():
     app.register_blueprint(test)
     app.register_blueprint(scripts)
     app.register_blueprint(planets)
+    app.register_blueprint(auth)
     return app
