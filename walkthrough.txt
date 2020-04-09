@@ -9,4 +9,5 @@ Setup modular folder structure
 cd app
 python -m flask run
 install flake8 linter
-flask scripts <command>
+flask scripts db_create
+flask scripts db_seed

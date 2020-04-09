@@ -1,6 +1,12 @@
 from flask import Flask
 from .extensions.sqlalchemy import db
+from flask_marshmallow import Marshmallow
+
+# Views
 from .views.test import test
+from .views.planets import planets
+
+# Scripts
 from .scripts.index import scripts
 
 
@@ -11,6 +17,9 @@ def create_app():
         "SQLALCHEMY_DATABASE_URI"
     ] = "mysql://admin:r0W[qJnK@localhost:3306/flask_api"
     db.init_app(app)
+    ma = Marshmallow(app)
+    # Blueprints
     app.register_blueprint(test)
     app.register_blueprint(scripts)
+    app.register_blueprint(planets)
     return app
